@@ -1,0 +1,251 @@
+ERROR DETECTION AND COMPARISON OF GESTURE CONTROL TECHNOLOGIES
+
+
+Aditya Prasad Mohapatra¹, Bishweashwar Sukla², Harikrishnan KM ³
+¹ ² ³ Department of  Electronics and  Electrical  Engineering, IIIT Bhubaneswar, India
+
+
+Article Info
+
+
+ABSTRACT 
+Article history:
+Received Jun 12, 201x
+Revised Aug 20, 201x
+Accepted Aug 26, 201x
+
+
+
+
+
+
+This paper showcases our study and observation on the error occurrence in gesture control technologies. For our study purpose, an ARDUINO-based gesture control environment has been developed by using the ARDUINO board to use motion gestures to control the contents in the screen. This environment is made using PSD as sensing devices, ARDUINO as a micro-controller and Python to execute commands in the system. it is performed on 2 different software applications namely Google Chrome and VLC Media Player. In Google Chrome gestures are used to traverse between tabs and also move up and down within a web page, whereas in VLC Media Player gestures are used to control the volume and speed. Through this, the difference between two technologies i.e infrared and ultrasonic are worked and compared. Various data visualization cues are prepared to better understand the error and the factors causing it. Thorough investigation of factors affecting the error has been done using our observation. The future of this technology and its limitations have been also discussed.
+Keywords:
+Errors
+Gesture Control
+Arduino
+Ultrasonic sensors
+IR sensors
+
+
+This is an open access article under the CC BY-SA license.
+
+Corresponding Author:
+Third Author,
+Department of Electrical and Computer Engineering,
+National Chung Cheng University,
+168 University Road, Minhsiung Township, Chiayi County 62102, Taiwan, ROC.
+Email: lsntl@ccu.edu.tw
+
+
+INTRODUCTION 
+This paper illustrates error occurrences and drawbacks of using ultrasonic technology for gesture control through the project Gesture control for computers using ultrasonic sensors. hand gestures were in the field of research from the 1990s and many wonderful works have been done[1].  This project helps the users to control the screen navigation and control with the help of normal hand movements. Research includes quantitative analysis of ultrasonic and infrared technologies with proper measurements and error calculation. PIR gestures identify and detect any movement within it’s range. A one-dimensional continuous-time signal delivered from the PIR sensor is used to identify the hand movements[2]. Gestures being the primitive form of communication within humans, these are highly useful for computer interaction[3]. Development of a new direct and simple technology is highly necessary because all the available technology in this field is complex and tough [4]. Recognition of hand gestures is difficult because it must recognize a sequence of hand shapes instead of its snapshot [5]. Automated recognition of human gesture is a great deal and boon for user interfacing [6].Human hand gestures have become more natural and with the help of wireless communication [7].Gestures are detected using optical and motion technology means by bluetooth, Acoustics, Tactiles, or infrared waves[8]. In the Vision Based system, Motion and skin color information is utilized to detect waving hands requesting control commands[9].Research still very active in unresolved challenges such as reliable input such as identification of gestures, sensitivity to variations in size, shape, speed and issues due to occlusion[10]. Making a cost efficient highly accurate model for a gesture control system is essential for the future[11]. Hand recognition based on visual technology is an active area of research from ages [12], [13]. These approaches are based on distance and accuracy which are quite flexible , but sometimes they make wrong detection on lighting changes and reflection. As demonstrated by Wachs et al. [14], there are not many practical hand gesture recognition systems that use visual technologies. The most modern PIR based hand gesture recognition systems are all based on the switch decisions of the analog circuitry of this type sensor [15]. So this paper presents study on the most cost efficient models and ways to increase their accuracy. These models are precisely demonstrated using two techniques namely infrared and ultrasonic sensors.
+          In our experiment, each model was provided with six numbers of gestures  to manipulate the screen motions and gestures were set and programmed accordingly in Arduino IDE and using python programming language, commands were given to the display. Then accuracy of gestures were quantified and represented in pie charts using proper data visualisation techniques in Jupyter notebook. Differences in accuracy between two technologies were quantified and results were concluded.
+
+		            Fig 1 Flowchart for a ideal gesture control device: 
+
+Fig 1.2 shows the flow of function in an ideal gesture control system. Input is given to the system which is then read by the sensing devices. Then the microcontroller interprets and processes the information. After interpretation a command or a signal is given to the system. This command or signal interacts with the output or display such that favourable changes are made in the display or output.
+Fig 2 Flowchart for Proximity Sensor based gesture control system:
+
+Fig 1.3 shows the flow of function in a Proximity based Ideal Gesture Control system. Gesture is given as Input to the system which is then read by the Proximity sensors. Then the microcontroller interprets and processes the information. After interpretation a command or a signal is given to the system. This command or signal interacts with the output or display such that favourable changes are made in the output.
+RESEARCH METHOD 
+2.1 Gesture Control system using ultrasonic sensor
+Required:
+
+Arduino UNO x 1 
+Ultrasonic Sensors x 2
+USB Cable (for Arduino)
+Jump wires
+A device for programming and display (PC)
+
+Circuit Diagram
+
+
+
+
+                                 Fig 3
+         Circuit diagram for Ultrasonic sensor
+         based       gesture     control     system
+
+ Fig 4
+Circuit for  Ultrasonic Sensor 
+based  gesture  control system
+
+
+The Trigger and Echo Pins of the first Ultrasonic Sensor are connected  with Pins 8 and 9 of the Arduino while Pins 2 and 3 of the Arduino are connected with the Trigger and Echo Pins of the Second Ultrasonic Sensor.. The two Ultrasonic sensors are placed on two opposite sides of the display, i.e left and right side.of the pc display in our case..
+
+2.2 Gesture Control System using Infrared Sensor
+Required:
+
+
+Arduino UNO x 1 
+2 x IR sensor
+USB Cable (for Arduino)
+Jump wires
+A device for programming and display (PC)
+
+
+Circuit Diagram :
+
+
+
+
+
+
+Fig 5
+Circuit diagram for IR sensor 
+               based  gesture  control system
+ 
+Fig 6
+Circuit For IR sensor based 
+                 gesture      control     system
+
+
+Associated a jumper wire in the collector pin of the IC to utilize this sensor as a simple sensor. To perceive signal developments utilizing IR sensors, a trigger system is utilized. Let two IR sensors be placed on opposite sides of the display and named left-IR and right-IR. Additionally, place your IR sensor such that there is around 3 cm of hole between them.
+
+2.3Programming Arduino to Detect Gestures
+            Different cases are made to distinguish gestures from each other based on the distance measured by the sensors over a time period which is unique to a particular gesture. Creating different cases for different gestures makes it possible to execute different commands on sensing different gestures which is done by the help of python. 
+Following are the cases:-
+Gesture 1: Place your palm in front of the right sensor and move towards yourself (distance of palm from sensors should be between 15 to 35 cm) . This motion will scroll down your page in the browser or decrease the volume in the media player.
+Gesture 2:  Place your palm in front of the right sensor and move towards sensors (distance of palm from sensors should be between 15 to 35 cm) . This motion will scroll up your page in the browser or increase the volume in the media player.
+Gesture 3: Swipe your hand in front of  the Right Ultrasonic Sensor. This motion will change your current tab  to the Next Tab or fast forward the video running in the media player by 10 seconds.
+Gesture 4: Swipe your hand in front  the Left Ultrasonic Sensor. This motion will change your current Tab  to the Previous Tab or backward the video running in the media player by 10 seconds.
+Gesture 5: Swipe your both palms in front of both sensors simultaneously (left palm a little bit fast). This motion switches between tasks (i.e browser and media player).
+ RESULTS AND DISCUSSION
+ 3.1. Ultrasonic Sensors
+
+
+
+Fig 6
+This graph shows that scroll up gesture  is only 66.3% accurate
+Fig 7 
+This graph shows that scroll up gesture  is only 85.9.9% accurate
+Fig 8 
+This graph shows that scroll up gesture  is only 80.4% accurate
+
+
+                                                                                                                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Fig 9  				      Fig 10
+        This  graph  shows  that  scroll  up 	            This graph  shows that  scroll   up gesture
+                       gesture is  only   72.9%   accurate 	             has  become  83.9%  accurate with barrier
+
+
+
+
+
+
+
+
+
+
+
+
+     3.2 infrared Sensors
+
+                                                
+                                   
+
+
+
+      
+
+                                                          
+                           
+                               
+                                           
+
+
+                   Fig 11
+This graph  shows  that  scroll  up  gesture is 96% accurate
+
+                  Fig 12
+This  graph  shows  that scroll  up  gesture is 93.5% accurate
+
+Fig 13
+This  graph  shows  that  scroll  up  gesture is 95.5% accurate
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+                                     
+                                                                                   Fig 14	                                                                                   
+                                                                  This graph shows  that scroll
+                                                                  up gesture is  94.5% accurate
+
+CONCLUSION 
+It has been quantified that IR sensors have a better accuracy in Gesture control technology than Ultrasonic sensors. The increase in accuracy has been found out to about 27.874% through our experiment. Among the two technologies, complimenting the gesture motions,  studied and compared thoroughly , error observations were noted , which were consolidated into the following conclusions :-
+Cons in using Ultrasonic Sensors
+Its range is upto 400cm. If multiple sensors are put closely, there will be interference and it will give unwanted output which is unreliable. Moreover if there is sound absorbing or reflecting material worn by the user or are in very close proximity of the sensors the readings will be faulty resulting in wrong commands given to the system.
+Cons in using IR sensors
+It gives inaccurate reading if encountered with a reflective surface. If the user wears something that is reflective in nature or absorbs the beam of IR,  the reading of the ir sensor can become inaccurate. If multiple sensors are put closely, there will be interference and it will give unreliable output. It can maintain high accuracy for a range of 150 cm after that irregularities increase in the readings from the sensor.
+Ultrasonic sensors work using the principle of sound waves. Their results can be affected due to many factors such  as noise , other obstacle interactions, sensor liabilities. But can be used where there is less sound medium based noise and more heat related noise.
+Infrared, on the other hand, is a more accurate technology considering the gesture technologies and its application. It still has shortcomings; for instance if there are many heat sources in the environment.
+Error arising in an ultrasonic sensor due to noise and other matters can be decreased by adding a barrier in between the ultrasonic sensor to decrease the interruption by the sound noises normal to the barrier and isolate the direction to be sensed.
+Barrier addition resulted in increasing the accuracy of the observations to about 26.54% of the original value.
+
+
+REFERENCES 
+J. M. Rehg and T. Kanade, "Digiteyes: Vision-based hand tracking for human-computer interaction", Proc. IEEE Workshop on Motion of Non-Rigid and Articulated Objects, pp. 16-22, Nov. 1994.
+W. T. Freeman and C. D. Weissman, "Hand gesture machine control system", Computer Integrated Manufacturing Systems, vol. 10, no. 2, pp. 175-175, May 1997.
+J. P. Wachs, M. Kölsch, H. Stern and Y. Edan, "Vision-based hand-gesture applications", Communications of the ACM, vol. 54, no. 2, pp. 60-71, Jan. 2011.
+J. M. Rehg and T. Kanade, "Digiteyes: Vision-based hand tracking for human-computer interaction", Proc. IEEE Workshop on Motion of Non-Rigid and Articulated Objects, pp. 16-22, Nov. 1994.
+M. Ishikawa and H. Matsumura, "Recognition of a hand-gesture based on self-organization using a DataGlove", Proc. of the 6th International Conference on Neural Information Processing, vol. 2, pp. 739-745, Nov. 1999.
+Caifeng Shan, "Gesture Control for Consumer Electronics", 2010.
+Umesh Yadav, Ankur Tripathi, Sonali Dubey and S.K. Dubey, "Gesture Control Robot", International Journal of Advanced Technology in Engineering and Science, vol. 2, no. 5, May 2014.
+M.Jain,Aditi ,A. Lohiya,M. M. Khan and A. Maurya, "Wireless gesture control robot: an analysis." International Journal of Advanced Research in Computer and Communication Engineering 1.10 (2012): 855-857.
+D. Lee and Y. Park, "Vision-based remote control system by motion detection and open finger counting", IEEE Trans. Consumer Electron., vol. 55, no. 4, pp. 2308-2313, Nov. 2009.
+Pramod Kumar Pisharady and Martin Saerbeck, "Recent methods and databases in vision-based hand gesture recognition: A review", Elsevier Computer Vision and Image Understanding, vol. 141, pp. 152-165, December 2015.El Velliste, Sagi Perel and M. Chance Spalding, "Cortical control of a prosthetic arm for self-feeding", Nature, vol. 453, pp. 1098-1101, June 2008.
+Y. Han, "A low-cost visual motion data glove as an input device to interpret human hand gestures", IEEE Trans. Consumer Electron., vol. 56, no. 2, pp. 501-509, May 2010.
+A. Erdem, E. Erdem, Y. Yardimci and V. Atalay, "Computer vision based mouse", Proc. IEEE International Conference on Acoustics Speech and Signal Processing, vol. 4, May 2002.
+D. Lee and Y. Park, "Vision-based remote control system by motion detection and open finger counting", IEEE Trans. Consumer Electron., vol. 55, no. 4, pp. 2308-2313, Nov. 2009.
+J. P. Wachs, M. Kölsch, H. Stern and Y. Edan, "Vision-based hand-gesture applications", Communications of the ACM, vol. 54, no. 2, pp. 60-71, Jan. 2011.
+"Automated dispenser for disinfectant with proximity sensor", Dec. 1997.
+O. Z. Ozer, O. Ozun, C. O. Tuzel, V. Atalay and A. E. Cetin, "Vision-based single-stroke character recognition for wearable computing", IEEE Intell. Syst., vol. 16, no. 3, pp. 33-37, Jan./Feb. 2001.
+K. Gill, S. H. Yang, F. Yao and X. Lu, "A zigbee-based home automation system", IEEE Trans. Consumer Electron., vol. 55, no. 2, pp. 422-430, May 2009.
+A. Erdem, E. Erdem, Y. Yardimci and V. Atalay, "Computer vision based mouse", Proc. IEEE International Conference on Acoustics Speech and Signal Processing, vol. 4, May 2002.
+"Automated dispenser for disinfectant with proximity sensor", Dec. 1997.
+Y. W. Bai, Z. L. Xie and Z. H. Li, "Design and implementation of a home embedded surveillance system with ultra-low alert power", IEEE Trans. Consumer Electron., vol. 57, no. 1, pp. 153-159, Feb. 2011.
+C. W. Kim, R. Ansari and A. E. Cetin, "A class of linear-phase regular biorthogonal wavelets", Proc. IEEE International Conference on Acoustics Speech and Signal Processing, vol. 4, pp. 673-676, Mar. 1992.
+R. L. Graham and F. F. Yao, "Finding the convex hull of a simple polygon", Journal of Algorithms, vol. 4, no. 4, pp. 324-331, Dec. 1983.
+Jibin Fu, Xin Bai and Baode Ju, "A video target detection algorithm based on pixels texture correlation background model[C]", IEEE Beijing China: Intelligent. Visual Surveillance (IVS) 2011 Third Chinese Conference on, pp. 61-64, 2011.
+Lu Yishu, "Research of Vision Based Gesture Recognition [D]", Tianjin Industry University, 2016.
+Cao Liang, "Image Segmentation Based on Otsu Algorithm[D]", Wuhan University of Technology, 2008.
+Qiu Di, "Study of skin color detection based on HSV and YCrCb color space[J]", Computer programming skills and maintenance, vol. 10, pp. 74-75, 2012.
+Zhang Ruoyu, "Research and Implementation of Key Algorithms of Gesture Recognition in Human-Computer Interaction.[D]", Guangdong University of Technology, 2014.
+S. Jiang et al., "Feasibility of wrist-worn real-time hand and surface gesture recognition via sEMG and IMU sensing", IEEE Trans. Ind. Inform., vol. 14, no. 8, pp. 3376-3385, Aug. 2018.
+G. Ran, "A COMPUTER VISION-BASED GESTURE DETECTION AND RECOGNITION TECHNIQUE[J]", Computer Applications & Software, vol. 30, no. 1, pp. 155-154, 2013.
+M Kirby and L. Sirovich, "Application of the Karhunen-Loeve Procedure for the Characterization of Human Faces[J]", IEEE Transactions on Pattern Analysis & Machine Intelligence, vol. 12, no. 1, pp. 103-108, 1990.
+G Gan and J. Cheng, "Pedestrian Detection Based on PC A-HOG Feature", [C] International Conference on Computational Intelligence and Security Cis 2018, pp. 1184-1187, December.
+J. Y. Huang, G. H. Song and Y. T. Lan, "Camshift tracking based on constant cross ratio", Optics & Precision Engineering, pp. 945-953, 2016.
+S Paul, U K Durgam and U C. Pati, “Multimodal Optical Image Registration Using Modified SIFT”, 2018.
+T. Simon, H. Joo, I. Matthews and Y. Sheikh, "Hand Keypoint Detection in Single Images using Multiview Bootstrapping", CVPR, 2017.
+V. Dibia, "HandTrack: A Library for Prototyping Real-time Hand Tracking Interfaces using Convolutional Neural Networks" in GitHub repository, 2017.
+F. Erden et al., "Wavelet based flickering flame detector using differential PIR sensors", Fire Safety Journal, vol. 53, pp. 13-18, Oct. 2012.
+Bhumika Pathak, Anand Jalal, Subhash Agrawal and Charul Bhatnagar, "A Framework for Dynamic Hand Gesture Recognition Using Key Frames Extraction", Fifth National Conference on Computer Vision Pattern Recognition Image Processing and Graphics (NCVPRIPG), pp. 1-4, 2015.
+Stephan Waldherr, Roseli Romero and Sebastian Thrun, "A Gesture Based Interface for Human-Robot Interaction", Springer Journal on Autonomous Robots, vol. 9, no. 2, pp. 151-173, September 2000.
+R. Khan, A. Hanbury, J. St and A. Bais, "Color based skin classification", Pattern Recognition Letters, vol. 33, no. 2, pp. 157-163, Jan. 2012.
+Fariha Haque, Asif Sushmit and M.A. Sarkar, "Design of a Voice Controlled Gripper Arm Using Neural Networks", ICECDS 2017.
+El Velliste, Sagi Perel and M. Chance Spalding, "Cortical control of a prosthetic arm for self-feeding", Nature, vol. 453, pp. 1098-1101, June 2008.
