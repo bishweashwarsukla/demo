@@ -1,8 +1,9 @@
-ERROR DETECTION AND COMPARISON OF GESTURE CONTROL TECHNOLOGIES
+Error Detection and Comparison of Gesture Control Technologies
 
-
-Aditya Prasad Mohapatra¹, Bishweashwar Sukla², Harikrishnan KM ³
-¹ ² ³ Department of  Electronics and  Electrical  Engineering, IIIT Bhubaneswar, India
+Aditya Prasad Mohapatra¹, Bishweashwar Sukla², Harikrishnan KM³, Debani Prasad Mishra4, Surender Reddy Salkuti5
+1,2,3Department of  Electrical and Electronics Engineering, IIIT Bhubaneswar, India
+4Department of Electrical Engineering, IIIT Bhubaneswar, Odisha, India
+5Department of Railroad and Electrical Engineering, Woosong University, Daejeon, Republic of Korea
 
 
 Article Info
@@ -19,7 +20,7 @@ Accepted Aug 26, 201x
 
 
 
-This paper showcases our study and observation on the error occurrence in gesture control technologies. For our study purpose, an ARDUINO-based gesture control environment has been developed by using the ARDUINO board to use motion gestures to control the contents in the screen. This environment is made using PSD as sensing devices, ARDUINO as a micro-controller and Python to execute commands in the system. it is performed on 2 different software applications namely Google Chrome and VLC Media Player. In Google Chrome gestures are used to traverse between tabs and also move up and down within a web page, whereas in VLC Media Player gestures are used to control the volume and speed. Through this, the difference between two technologies i.e infrared and ultrasonic are worked and compared. Various data visualization cues are prepared to better understand the error and the factors causing it. Thorough investigation of factors affecting the error has been done using our observation. The future of this technology and its limitations have been also discussed.
+This paper showcases the study and observation on the error occurrence in gesture control technologies. An ARDUINO-based gesture control environment has been developed by using the ARDUINO board to use motion gestures to control the contents in the screen. This environment is made using PSD as sensing devices, ARDUINO as a micro-controller and Python to execute commands in the system. it is performed on 2 different software applications namely Google Chrome and VLC Media Player. In Google Chrome gestures are used to traverse between tabs and also move up and down within a web page, whereas in VLC Media Player gestures are used to control the volume and speed. Through this, the difference between two technologies i.e., infrared and ultrasonic are worked and compared. Various data visualization cues are prepared to better understand the error and the factors causing it. Thorough investigation of factors affecting the error has been done using our observation. The future of this technology and its limitations have been also discussed.
 Keywords:
 Errors
 Gesture Control
@@ -31,98 +32,71 @@ IR sensors
 This is an open access article under the CC BY-SA license.
 
 Corresponding Author:
-Third Author,
-Department of Electrical and Computer Engineering,
-National Chung Cheng University,
-168 University Road, Minhsiung Township, Chiayi County 62102, Taiwan, ROC.
-Email: lsntl@ccu.edu.tw
+Surender Reddy Salkuti, 
+Department of Railroad and Electrical Engineering,
+Woosong University,
+17-2, Jayang-Dong, Dong-Gu, Daejeon - 34606, Republic of Korea.
+Email: surender@wsu.ac.kr
 
 
 INTRODUCTION 
-This paper illustrates error occurrences and drawbacks of using ultrasonic technology for gesture control through the project Gesture control for computers using ultrasonic sensors. hand gestures were in the field of research from the 1990s and many wonderful works have been done[1].  This project helps the users to control the screen navigation and control with the help of normal hand movements. Research includes quantitative analysis of ultrasonic and infrared technologies with proper measurements and error calculation. PIR gestures identify and detect any movement within it’s range. A one-dimensional continuous-time signal delivered from the PIR sensor is used to identify the hand movements[2]. Gestures being the primitive form of communication within humans, these are highly useful for computer interaction[3]. Development of a new direct and simple technology is highly necessary because all the available technology in this field is complex and tough [4]. Recognition of hand gestures is difficult because it must recognize a sequence of hand shapes instead of its snapshot [5]. Automated recognition of human gesture is a great deal and boon for user interfacing [6].Human hand gestures have become more natural and with the help of wireless communication [7].Gestures are detected using optical and motion technology means by bluetooth, Acoustics, Tactiles, or infrared waves[8]. In the Vision Based system, Motion and skin color information is utilized to detect waving hands requesting control commands[9].Research still very active in unresolved challenges such as reliable input such as identification of gestures, sensitivity to variations in size, shape, speed and issues due to occlusion[10]. Making a cost efficient highly accurate model for a gesture control system is essential for the future[11]. Hand recognition based on visual technology is an active area of research from ages [12], [13]. These approaches are based on distance and accuracy which are quite flexible , but sometimes they make wrong detection on lighting changes and reflection. As demonstrated by Wachs et al. [14], there are not many practical hand gesture recognition systems that use visual technologies. The most modern PIR based hand gesture recognition systems are all based on the switch decisions of the analog circuitry of this type sensor [15]. So this paper presents study on the most cost efficient models and ways to increase their accuracy. These models are precisely demonstrated using two techniques namely infrared and ultrasonic sensors.
-          In our experiment, each model was provided with six numbers of gestures  to manipulate the screen motions and gestures were set and programmed accordingly in Arduino IDE and using python programming language, commands were given to the display. Then accuracy of gestures were quantified and represented in pie charts using proper data visualisation techniques in Jupyter notebook. Differences in accuracy between two technologies were quantified and results were concluded.
+This paper illustrates error occurrences and drawbacks of using ultrasonic technology for gesture control through the project Gesture control for computers using ultrasonic sensors. hand gestures were in the field of research from the 1990s and many wonderful works have been done [1]. This work helps the users to control the screen navigation and control with the help of normal hand movements. Research includes quantitative analysis of ultrasonic and infrared technologies with proper measurements and error calculation. PIR gestures identify and detect any movement within it’s range. A one-dimensional continuous-time signal delivered from the PIR sensor is used to identify the hand movements [2]. Gestures being the primitive form of communication within humans, these are highly useful for computer interaction [3]. Development of a new direct and simple technology is highly necessary because all the available technology in this field is complex and tough [4]. Recognition of hand gestures is difficult because it must recognize a sequence of hand shapes instead of its snapshot [5]. Automated recognition of human gesture is a great deal and boon for user interfacing [6]. Human hand gestures have become more natural and with the help of wireless communication [7]. Gestures are detected using optical and motion technology means by bluetooth, acoustics, tactiles, or infrared waves [8]. In the vision based system, motion and skin color information is utilized to detect waving hands requesting control commands [9]. Research still very active in unresolved challenges such as reliable input such as identification of gestures, sensitivity to variations in size, shape, speed and issues due to occlusion [10]. Making a cost efficient highly accurate model for a gesture control system is essential for the future [11]. Hand recognition based on visual technology is an active area of research from ages [12, 13]. These approaches are based on distance and accuracy which are quite flexible , but sometimes they make wrong detection on lighting changes and reflection. As demonstrated by reference [14], there are not many practical hand gesture recognition systems that use visual technologies. The most modern PIR based hand gesture recognition systems are all based on the switch decisions of the analog circuitry of this type sensor [15]. So this paper presents study on the most cost efficient models and ways to increase their accuracy. These models are precisely demonstrated using two techniques namely infrared and ultrasonic sensors.
+In the present work, each model was provided with six numbers of gestures  to manipulate the screen motions and gestures were set and programmed accordingly in Arduino IDE and using python programming language, commands were given to the display. Then accuracy of gestures were quantified and represented in pie charts using proper data visualisation techniques in Jupyter notebook. Differences in accuracy between two technologies were quantified and results were concluded.
+Figure 1 shows the flow of function in an ideal gesture control system. Input is given to the system which is then read by the sensing devices. Then the microcontroller interprets and processes the information. After interpretation a command or a signal is given to the system. This command or signal interacts with the output or display such that favourable changes are made in the display or output.
 
-		            Fig 1 Flowchart for a ideal gesture control device: 
+Fig. 1. Flowchart for a ideal gesture control device.
+Figure 2 shows the flow of function in a proximity based ideal gesture control system. Gesture is given as input to the system which is then read by the proximity sensors. Then the microcontroller interprets and processes the information. After interpretation a command or a signal is given to the system. This command or signal interacts with the output or display such that favourable changes are made in the output.
 
-Fig 1.2 shows the flow of function in an ideal gesture control system. Input is given to the system which is then read by the sensing devices. Then the microcontroller interprets and processes the information. After interpretation a command or a signal is given to the system. This command or signal interacts with the output or display such that favourable changes are made in the display or output.
-Fig 2 Flowchart for Proximity Sensor based gesture control system:
 
-Fig 1.3 shows the flow of function in a Proximity based Ideal Gesture Control system. Gesture is given as Input to the system which is then read by the Proximity sensors. Then the microcontroller interprets and processes the information. After interpretation a command or a signal is given to the system. This command or signal interacts with the output or display such that favourable changes are made in the output.
+Fig. 2. Flowchart for proximity sensor based gesture control system.
 RESEARCH METHOD 
-2.1 Gesture Control system using ultrasonic sensor
-Required:
 
-Arduino UNO x 1 
-Ultrasonic Sensors x 2
-USB Cable (for Arduino)
-Jump wires
-A device for programming and display (PC)
-
-Circuit Diagram
+2.1 Gesture control system using ultrasonic sensor
+Components required to develop the gesture control system using ultrasonic sensor are: Arduino UNO x 1, Ultrasonic Sensors x 2, USB cable (for Arduino), a device for programming and display (PC) and jump wires. Figures 3 and 4 depicts the circuit diagram for ultrasonic sensor based gesture control system.
 
 
 
 
-                                 Fig 3
-         Circuit diagram for Ultrasonic sensor
-         based       gesture     control     system
-
- Fig 4
-Circuit for  Ultrasonic Sensor 
-based  gesture  control system
 
 
-The Trigger and Echo Pins of the first Ultrasonic Sensor are connected  with Pins 8 and 9 of the Arduino while Pins 2 and 3 of the Arduino are connected with the Trigger and Echo Pins of the Second Ultrasonic Sensor.. The two Ultrasonic sensors are placed on two opposite sides of the display, i.e left and right side.of the pc display in our case..
+Fig. 3. Circuit diagram for ultrasonic sensor
+based gesture control system.
+
+ Fig. 4. Circuit diagram for  ultrasonic sensor 
+based  gesture  control system.
+
+The trigger and echo pins of the first ultrasonic sensor are connected with pins 8 and 9 of the Arduino while pins 2 and 3 of the Arduino are connected with the trigger and echo pins of the second ultrasonic sensor. The two ultrasonic sensors are placed on two opposite sides of the display, i.e., left and right side of the pc display in our case.
 
 2.2 Gesture Control System using Infrared Sensor
-Required:
-
-
-Arduino UNO x 1 
-2 x IR sensor
-USB Cable (for Arduino)
-Jump wires
-A device for programming and display (PC)
-
-
-Circuit Diagram :
+Components required to develop the gesture control system using infrared sensor are: Arduino UNO x 1, 2 x IR sensor, USB Cable (for Arduino), a device for programming and display (PC) and jump wires. Figures 5 and 6 depicts the circuit diagram for IR based gesture control system. 
 
 
 
 
 
-
-Fig 5
-Circuit diagram for IR sensor 
-               based  gesture  control system
+Fig. 5. Circuit diagram for IR sensor based  gesture control system.
  
-Fig 6
-Circuit For IR sensor based 
-                 gesture      control     system
-
+Fig. 6. Circuit For IR sensor based gesture control system.
 
 Associated a jumper wire in the collector pin of the IC to utilize this sensor as a simple sensor. To perceive signal developments utilizing IR sensors, a trigger system is utilized. Let two IR sensors be placed on opposite sides of the display and named left-IR and right-IR. Additionally, place your IR sensor such that there is around 3 cm of hole between them.
 
-2.3Programming Arduino to Detect Gestures
-            Different cases are made to distinguish gestures from each other based on the distance measured by the sensors over a time period which is unique to a particular gesture. Creating different cases for different gestures makes it possible to execute different commands on sensing different gestures which is done by the help of python. 
-Following are the cases:-
+2.3 Programming Arduino to Detect Gestures
+Different cases are made to distinguish gestures from each other based on the distance measured by the sensors over a time period which is unique to a particular gesture. Creating different cases for different gestures makes it possible to execute different commands on sensing different gestures which is done by the help of python. Following are the cases:
 Gesture 1: Place your palm in front of the right sensor and move towards yourself (distance of palm from sensors should be between 15 to 35 cm) . This motion will scroll down your page in the browser or decrease the volume in the media player.
 Gesture 2:  Place your palm in front of the right sensor and move towards sensors (distance of palm from sensors should be between 15 to 35 cm) . This motion will scroll up your page in the browser or increase the volume in the media player.
 Gesture 3: Swipe your hand in front of  the Right Ultrasonic Sensor. This motion will change your current tab  to the Next Tab or fast forward the video running in the media player by 10 seconds.
 Gesture 4: Swipe your hand in front  the Left Ultrasonic Sensor. This motion will change your current Tab  to the Previous Tab or backward the video running in the media player by 10 seconds.
-Gesture 5: Swipe your both palms in front of both sensors simultaneously (left palm a little bit fast). This motion switches between tasks (i.e browser and media player).
- RESULTS AND DISCUSSION
+Gesture 5: Swipe your both palms in front of both sensors simultaneously (left palm a little bit fast). This motion switches between tasks (i.e., browser and media player).
+
+ 3. RESULTS AND DISCUSSION
  3.1. Ultrasonic Sensors
 
 
-
-Fig 6
-This graph shows that scroll up gesture  is only 66.3% accurate
+Fig 6. This graph shows that scroll up gesture  is only 66.3% accurate
 Fig 7 
 This graph shows that scroll up gesture  is only 85.9.9% accurate
 Fig 8 
 This graph shows that scroll up gesture  is only 80.4% accurate
-
 
                                                                                                                   
 
@@ -143,17 +117,7 @@ This graph shows that scroll up gesture  is only 80.4% accurate
                        gesture is  only   72.9%   accurate 	             has  become  83.9%  accurate with barrier
 
 
-
-
-
-
-
-
-
-
-
-
-     3.2 infrared Sensors
+3.2 infrared Sensors
 
                                                 
                                    
@@ -166,7 +130,6 @@ This graph shows that scroll up gesture  is only 80.4% accurate
                            
                                
                                            
-
 
                    Fig 11
 This graph  shows  that  scroll  up  gesture is 96% accurate
